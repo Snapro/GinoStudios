@@ -1,0 +1,80 @@
+# ============================================================
+# NETLIFY CONFIGURATION — GINO STUDIOS ZAMBIA
+# ============================================================
+
+[build]
+  publish = "."
+  command = ""
+
+# ── SECURITY HEADERS ──────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent framing (clickjacking)
+    X-Frame-Options = "SAMEORIGIN"
+
+    # No MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+
+    # XSS protection (legacy browsers)
+    X-XSS-Protection = "1; mode=block"
+
+    # Referrer policy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # HSTS (enable once HTTPS is confirmed stable)
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+
+    # Permissions policy
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+    # Content Security Policy
+    # Allows: self, fonts.googleapis.com, fonts.gstatic.com
+    # Update 'script-src' if you add analytics or third-party scripts
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://static.wixstatic.com; connect-src 'self'; frame-ancestors 'none';"
+
+# ── CACHE CONTROL ─────────────────────────────────────────────
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# ── REDIRECTS ─────────────────────────────────────────────────
+# www → non-www canonical redirect
+[[redirects]]
+  from = "https://www.ginostudios.zm/*"
+  to   = "https://ginostudios.zm/:splat"
+  status = 301
+  force  = true
+
+# Trailing slash normalisation
+[[redirects]]
+  from   = "/services"
+  to     = "/services/"
+  status = 301
+
+[[redirects]]
+  from   = "/blog"
+  to     = "/blog/"
+  status = 301
+
+# 404 fallback
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 404

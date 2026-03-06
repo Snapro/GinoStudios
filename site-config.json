@@ -1,0 +1,68 @@
+{
+  "site": {
+    "name": "Gino Studios Zambia",
+    "tagline": "YOU CREATE THE NARRATIVE. We make it unforgettable.",
+    "description": "Lusaka-based creative studio offering architectural visualisation, motion design, photography, graphic design, and web development.",
+    "url": "https://ginostudios.zm",
+    "locale": "en-ZM",
+    "timezone": "Africa/Lusaka"
+  },
+  "brand": {
+    "colors": {
+      "bg_base": "#080b0f",
+      "bg_surface": "#0f1318",
+      "bg_card": "#141920",
+      "gold": "#c8a96e",
+      "gold_light": "#e2c48a",
+      "text_primary": "#f2ede4",
+      "text_secondary": "#a8a099",
+      "text_muted": "#5c5650"
+    },
+    "fonts": {
+      "display": "Syne",
+      "body": "Outfit",
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap"
+    },
+    "aesthetic": "Dark Luxury Editorial"
+  },
+  "company": {
+    "founder": "Joshua Bolton",
+    "linkedin": "https://zm.linkedin.com/in/joshua-bolton-37b561143",
+    "location": "Lusaka, Zambia",
+    "country": "ZM",
+    "email_placeholder": "hello@ginostudios.zm",
+    "phone_placeholder": "+260 000 000 000",
+    "copyright_year": 2024
+  },
+  "services": [
+    { "id": 1, "name": "Architectural Visualisation", "slug": "service-1" },
+    { "id": 2, "name": "Motion Design",               "slug": "service-2" },
+    { "id": 3, "name": "Graphics Design & Print",      "slug": "service-3" },
+    { "id": 4, "name": "Photography & Videography",    "slug": "service-4" },
+    { "id": 5, "name": "Web Design & Development",     "slug": "service-5" }
+  ],
+  "notable_clients": [
+    "Ministry of Commerce, Trade and Industry",
+    "Bankers & Robbers",
+    "Samfya Beach (TIC)",
+    "Tomorrow Investments",
+    "24Six Mishpacha",
+    "Pet Joy Store",
+    "Gravity Power",
+    "SOA",
+    "Buy.Build.Sell"
+  ],
+  "forms": {
+    "contact": { "name": "contact", "netlify": true },
+    "quote":   { "name": "quote",   "netlify": true },
+    "newsletter": { "name": "newsletter", "netlify": true }
+  },
+  "seo": {
+    "og_image": "/assets/images/og-home.jpg",
+    "twitter_card": "summary_large_image"
+  },
+  "analytics": {
+    "google_analytics_id": "",
+    "note": "Add GA4 Measurement ID here (e.g. G-XXXXXXXXXX)"
+  }
+}

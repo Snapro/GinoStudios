@@ -1,0 +1,152 @@
+SOURCE ATTRIBUTION
+Gino Studios Zambia Website
+Generated from: https://snapro.wixsite.com/ginostudioszm
+====================================================
+
+SOURCE PAGES ACCESSED
+─────────────────────
+1. https://snapro.wixsite.com/ginostudioszm         (Home page)
+2. https://snapro.wixsite.com/ginostudioszm/about-us (About Us page)
+3. https://snapro.wixsite.com/ginostudioszm/architecture-visualization (Architectural Visualisation portfolio)
+
+────────────────────────────────────────────────────────────────
+CONTENT EXTRACTED (Used Verbatim or Near-Verbatim)
+────────────────────────────────────────────────────────────────
+
+1. COMPANY NAME
+   Source: Site title and footer
+   Extracted: "Gino Studios Zambia"
+   Used in: All pages, nav, footer, JSON-LD schema
+
+2. TAGLINE
+   Source: Home page hero and footer
+   Extracted: "YOU CREATE THE NARRATIVE. We make it unforgettable."
+   Used in: index.html hero, footer, about.html, all meta descriptions
+
+3. BRAND DESCRIPTOR
+   Source: Home page
+   Extracted: "Innovate and Create"
+   Used in: index.html <title> tag
+
+4. ABOUT US COPY (paraphrased with light editing for web format)
+   Source: about-us page
+   Original: "We are a creative studio that believes that everyone has the potential to 
+   create something amazing, it just starts with an idea. We exist to help brands 
+   leverage cutting edge technologies and techniques for their brands development and 
+   marketing efforts..."
+   Used in: about.html (lightly edited for readability and web format)
+
+5. INTRO COPY (adapted)
+   Source: Home page
+   Original: "Hey! we are here to turn bold ideas into lifelong masterpieces. The 
+   experience of being privileged enough to be among experts of photographers, 3D 
+   artists, animators, and creative consultants..."
+   Used in: index.html about section (rewritten into professional web copy)
+
+6. SERVICE NAMES (used verbatim)
+   Source: Navigation and home page service section
+   Extracted:
+   - "Architectural Visualisation"
+   - "Photography & Videography"
+   - "Motion Design"
+   - "Graphics Design & Print" (inferred from home page)
+   - "Web Design & Development" (inferred from home page)
+   Used in: services/index.html, all service pages, navigation
+
+7. SERVICE DESCRIPTIONS (used near-verbatim, lightly edited)
+   Source: Home page service cards
+   - Arch Viz: "Experience your building designs come to life with our architectural 
+     visualization service." → Expanded into full service page copy
+   - Motion Design: "Bring your ideas to life with our 3D and 2D animation service. 
+     A wide range of animation styles available, from realistic 3D to hand-drawn 2D."
+   - Graphics: "Professional graphic design and print service that creates visually 
+     stunning designs and materials that effectively communicate your message."
+   - Photography: "High-quality photography and videography services that capture the 
+     beauty and essence of your subject."
+   - Web: "With our web design and development services, we are dedicated to helping 
+     you make a memorable impact in the digital realm."
+
+8. ARCHITECTURAL VIZ PORTFOLIO ITEMS (project names used verbatim)
+   Source: architecture-visualization page
+   Extracted:
+   - "Ministry of Commerce, Trade and Industry 58th Trade Fair Stand Branding"
+   - "Ministry of Commerce, Trade and Industry Caminex 2024 Stand Branding"
+   - "Bankers & Robbers Virtual Set Design"
+   - "Samfya Beach (TIC) Rebranding"
+   - "Tomorrow Investments Trade Fair Stand"
+   - "24Six Mishpacha Virtual Set Design"
+   - "Pet Joy Store Virtual Set Design"
+   - "Gravity Power Virtual Set Design"
+   - "SOA Virtual Set Design"
+   - "Buy.Build.Sell Virtual Set Design"
+   Used in: portfolio.html, index.html clients section
+
+9. FOUNDER INFORMATION
+   Source: Home page and About page
+   Extracted: LinkedIn URL — https://zm.linkedin.com/in/joshua-bolton-37b561143
+   Used in: about.html, footer, JSON-LD schema
+
+10. SECTION HEADING
+    Source: Home page
+    Extracted: "KNOWLEDGE ABOVE ALL" and "OUR OUT OF THE BOX APPROACH"
+    Used in: about.html values section (adapted)
+
+11. BRAND QUESTION (used as quote)
+    Source: Home page
+    Extracted: "Are you prepared to adapt to this design future?"
+    Used in: index.html quote section (incorporated into longer editorial quote)
+
+12. COPYRIGHT LINE
+    Source: Footer
+    Extracted: "© 2024 Copyright Gino Studios | All rights reserved."
+    Used in: All page footers (adapted)
+
+────────────────────────────────────────────────────────────────
+CONTENT REWRITTEN / EXPANDED
+────────────────────────────────────────────────────────────────
+
+The following content was substantially rewritten or created new based on the 
+extracted source material to produce complete, SEO-optimised web copy:
+
+- All service detail page long-form descriptions (service-1 through service-5)
+- All three blog posts (titles derived from services; content is original editorial)
+- Portfolio page copy and case study framing
+- Privacy Policy (standard legal template adapted for Gino Studios)
+- Terms & Conditions (standard legal template adapted for Gino Studios)
+- All meta descriptions and OpenGraph tags
+- JSON-LD Organization schema
+- README.md (deployment and editing documentation)
+- site-config.json (configuration file)
+- netlify.toml (deployment configuration)
+
+────────────────────────────────────────────────────────────────
+PLACEHOLDERS (NOT FROM SOURCE — Must Be Replaced Before Launch)
+────────────────────────────────────────────────────────────────
+
+The following were created as professional placeholders because they were not 
+available in the source website at time of extraction:
+
+- Email address: hello@ginostudios.zm
+- Phone number: +260 000 000 000
+- Physical street address: "Lusaka, Zambia" (city only)
+- All portfolio images (placeholder divs only — images not accessible from Wix CDN)
+- Blog cover images
+- Service page images
+- About/team photography
+- OpenGraph image (og-home.jpg)
+- Favicon
+- Social media profiles (Instagram, Facebook, Twitter/X) — not found in source
+
+────────────────────────────────────────────────────────────────
+IMAGES NOT REPRODUCED
+────────────────────────────────────────────────────────────────
+
+Images from the original Wix site (hosted on static.wixstatic.com) have NOT been 
+downloaded or reproduced. All image areas use placeholder divs. The client should:
+
+1. Provide their own photography and render assets
+2. Place them in assets/images/ following the naming convention in README.md
+3. Replace placeholder divs with <img> tags
+
+────────────────────────────────────────────────────────────────
+END OF SOURCE ATTRIBUTION
