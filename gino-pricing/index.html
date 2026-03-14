@@ -6,18 +6,18 @@
   <title>Gino Studios Zambia · Pricing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,600&family=DM+Mono:wght@300;400;500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { background: #070705; color: #fff; font-family: 'DM Mono', monospace; overflow-x: hidden; }
+    html, body { background: #070705; color: #fff; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
     input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 2px; border-radius: 1px; outline: none; cursor: pointer; }
     input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; cursor: pointer; transition: transform 0.15s; }
     input[type=range]::-webkit-slider-thumb:active { transform: scale(1.3); }
     input[type=range]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; cursor: pointer; border: none; }
-    button { font-family: 'DM Mono', monospace; }
+    button { font-family: 'Montserrat', sans-serif; }
     #root { min-height: 100vh; }
   </style>
 </head>
@@ -437,42 +437,42 @@
           }}
         >
           {planKey === "pro" && (
-            <div style={{ position: "absolute", top: -1, left: "50%", transform: "translateX(-50%)", background: pd.color, color: "#000", fontSize: 9, fontWeight: 700, letterSpacing: "0.15em", padding: "4px 14px", borderRadius: "0 0 6px 6px", textTransform: "uppercase", whiteSpace: "nowrap" }}>
+            <div style={{ position: "absolute", top: -1, left: "50%", transform: "translateX(-50%)", background: pd.color, color: "#000", fontSize: 13, fontWeight: 700, letterSpacing: "0.02em", padding: "4px 14px", borderRadius: "0 0 6px 6px", textTransform: "uppercase", whiteSpace: "nowrap" }}>
               Best Value
             </div>
           )}
           <div style={{ width: 8, height: 8, borderRadius: "50%", background: isSel ? pd.color : "#252520", boxShadow: isSel ? `0 0 14px ${pd.color}99` : "none", marginBottom: 18, transition: "all 0.3s" }} />
           <div style={{ fontSize: 26, fontFamily: "'Cormorant Garamond',serif", fontWeight: 600, color: isSel ? "#fff" : "#666", letterSpacing: "-0.02em", marginBottom: 3, transition: "color 0.3s" }}>{pd.name}</div>
-          <div style={{ fontSize: 9, color: isSel ? pd.color : "#303028", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 6, transition: "color 0.3s" }}>{pd.tagline}</div>
-          <div style={{ fontSize: 9, color: "#2e2e28", letterSpacing: "0.06em", marginBottom: 22, borderBottom: "1px solid #181814", paddingBottom: 18 }}>
+          <div style={{ fontSize: 13, color: isSel ? pd.color : "#303028", letterSpacing: "0.01em", textTransform: "uppercase", marginBottom: 6, transition: "color 0.3s" }}>{pd.tagline}</div>
+          <div style={{ fontSize: 13, color: "#aaaaaa", letterSpacing: "0.02em", marginBottom: 22, borderBottom: "1px solid #181814", paddingBottom: 18 }}>
             Intl. equiv. <span style={{ color: isSel ? "#4a4a40" : "#282824" }}>{pd.usdRef}</span>
           </div>
           <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 46, fontWeight: 700, color: isSel ? "#fff" : "#3e3e3a", letterSpacing: "-0.04em", lineHeight: 1, marginBottom: 4, transition: "color 0.3s" }}>
             <span style={{ fontSize: 18, fontWeight: 400, verticalAlign: "super" }}>K</span>
             <AnimatedNumber value={total} />
           </div>
-          <div style={{ fontSize: 9, color: "#2e2e28", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: extra > 0 ? 4 : 6 }}>
+          <div style={{ fontSize: 13, color: "#aaaaaa", letterSpacing: "0.01em", textTransform: "uppercase", marginBottom: extra > 0 ? 4 : 6 }}>
             per project {rush && <span style={{ color: "#E8854A" }}>· rush +35%</span>}
           </div>
           {extra > 0 && (
-            <div style={{ fontSize: 9, color: "#383830", letterSpacing: "0.04em", marginBottom: 6 }}>
+            <div style={{ fontSize: 13, color: "#cccccc", letterSpacing: "0.01em", marginBottom: 6 }}>
               Base K{pd.basePrice.toLocaleString()} + {extra} extra × K{pd.pricePerUnit.toLocaleString()}
             </div>
           )}
           <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 24 }}>
             <div style={{ width: 4, height: 4, borderRadius: "50%", background: isSel ? pd.color : "#282824", transition: "background 0.3s" }} />
-            <span style={{ fontSize: 9, color: isSel ? "#666" : "#282824", letterSpacing: "0.06em", textTransform: "uppercase", transition: "color 0.3s" }}>{pd.turnaround}</span>
+            <span style={{ fontSize: 13, color: isSel ? "#666" : "#282824", letterSpacing: "0.02em", textTransform: "uppercase", transition: "color 0.3s" }}>{pd.turnaround}</span>
           </div>
           <div style={{ marginBottom: 28 }}>
             {pd.features.map((f, i) => (
               <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 9 }}>
                 <div style={{ width: 4, height: 4, borderRadius: "50%", background: isSel ? pd.color : "#252520", flexShrink: 0, marginTop: 5, transition: "background 0.3s" }} />
-                <span style={{ fontSize: 10, color: isSel ? "#888" : "#333", letterSpacing: "0.04em", lineHeight: 1.6, transition: "color 0.3s" }}>{f}</span>
+                <span style={{ fontSize: 12, color: isSel ? "#888" : "#333", letterSpacing: "0.01em", lineHeight: 1.6, transition: "color 0.3s" }}>{f}</span>
               </div>
             ))}
           </div>
           <button
-            style={{ width: "100%", padding: "13px 0", background: isSel ? pd.color : "transparent", color: isSel ? "#000" : "#2e2e28", border: isSel ? `1.5px solid ${pd.color}` : "1.5px solid #1e1e1a", borderRadius: 3, fontSize: 10, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", cursor: "pointer", transition: "all 0.3s" }}
+            style={{ width: "100%", padding: "13px 0", background: isSel ? pd.color : "transparent", color: isSel ? "#000" : "#2e2e28", border: isSel ? `1.5px solid ${pd.color}` : "1.5px solid #1e1e1a", borderRadius: 3, fontSize: 12, fontWeight: 700, letterSpacing: "0.02em", textTransform: "uppercase", cursor: "pointer", transition: "all 0.3s" }}
           >
             {isSel ? "Request Quote →" : "Select"}
           </button>
@@ -509,31 +509,31 @@
       `;
 
       return (
-        <div style={{ minHeight: "100vh", background: "#070705", color: "#fff", fontFamily: "'DM Mono',monospace", overflowX: "hidden" }}>
+        <div style={{ minHeight: "100vh", background: "#070705", color: "#fff", fontFamily: "'Montserrat',sans-serif", overflowX: "hidden" }}>
           <style>{sliderStyle}</style>
 
           <div style={{ maxWidth: 1120, margin: "0 auto", padding: isMobile ? "44px 0 130px" : "72px 24px 80px" }}>
 
             {/* HEADER */}
             <div style={{ textAlign: "center", padding: isMobile ? "0 20px" : 0, marginBottom: isMobile ? 36 : 56 }}>
-              <div style={{ fontSize: 9, letterSpacing: "0.35em", color: "#302e26", textTransform: "uppercase", marginBottom: 14 }}>
+              <div style={{ fontSize: 13, letterSpacing: "0.02em", color: "#999999", textTransform: "uppercase", marginBottom: 14 }}>
                 ◆ Gino Studios Zambia · Per Project Pricing
               </div>
               <h1 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? "clamp(40px,11vw,56px)" : "clamp(52px,7vw,82px)", fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 0.9, color: "#fff", marginBottom: 18 }}>
                 You create the narrative.<br />
                 <em style={{ color: "#C9A84C", fontStyle: "italic" }}>We price it simply.</em>
               </h1>
-              <p style={{ fontSize: isMobile ? 10 : 11, color: "#3e3e36", letterSpacing: "0.08em", maxWidth: 400, margin: "0 auto", lineHeight: 1.9 }}>
+              <p style={{ fontSize: isMobile ? 10 : 11, color: "#cccccc", letterSpacing: "0.01em", maxWidth: 400, margin: "0 auto", lineHeight: 1.9 }}>
                 International market benchmarks. One price per project scope — no subscriptions, no surprises. All amounts in Zambian Kwacha.
               </p>
-              <div style={{ marginTop: 14, fontSize: 9, color: "#28281e", letterSpacing: "0.06em" }}>
+              <div style={{ marginTop: 14, fontSize: 13, color: "#999999", letterSpacing: "0.02em" }}>
                 Rate ref: 1 USD ≈ K19.30 · March 2026
               </div>
             </div>
 
             {/* 01 · SERVICE SELECTOR */}
             <div style={{ padding: isMobile ? "0 16px" : 0, marginBottom: isMobile ? 24 : 36 }}>
-              <div style={{ fontSize: 8, letterSpacing: "0.25em", color: "#252520", textTransform: "uppercase", marginBottom: 10 }}>01 · Choose Service</div>
+              <div style={{ fontSize: 12, letterSpacing: "0.01em", color: "#999999", textTransform: "uppercase", marginBottom: 10 }}>01 · Choose Service</div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                 {Object.entries(SERVICES).map(([key, s]) => {
                   const active = service === key;
@@ -549,8 +549,8 @@
                         border: active ? `1px solid ${acol}` : "1px solid #1a1a17",
                         borderRadius: 4,
                         color: active ? "#fff" : "#383830",
-                        fontSize: 9,
-                        letterSpacing: "0.08em",
+                        fontSize: 13,
+                        letterSpacing: "0.01em",
                         textTransform: "uppercase",
                         cursor: "pointer",
                         transition: "all 0.25s",
@@ -560,7 +560,7 @@
                         gap: 8,
                       }}
                     >
-                      <span style={{ color: active ? acol : "#2a2a24", fontSize: 13 }}>{s.icon}</span>
+                      <span style={{ color: active ? acol : "#999999", fontSize: 13 }}>{s.icon}</span>
                       {s.label}
                     </button>
                   );
@@ -570,27 +570,27 @@
 
             {/* SERVICE DESCRIPTION */}
             <div style={{ padding: isMobile ? "0 16px" : 0, marginBottom: isMobile ? 20 : 28 }}>
-              <div style={{ background: "#0c0c0a", border: "1px solid #181814", borderRadius: 6, padding: "16px 20px", display: "flex", alignItems: "center", gap: 14 }}>
+              <div style={{ background: "#0c0c0a", border: "1px solid #999999", borderRadius: 6, padding: "16px 20px", display: "flex", alignItems: "center", gap: 14 }}>
                 <span style={{ fontSize: 22, color: pd.color }}>{svc.icon}</span>
                 <div>
-                  <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? 16 : 18, color: "#888", letterSpacing: "-0.01em" }}>{svc.label}</div>
-                  <div style={{ fontSize: 10, color: "#383830", letterSpacing: "0.05em", marginTop: 2 }}>{svc.description}</div>
+                  <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? 16 : 18, color: "#eeeeee", letterSpacing: "-0.01em" }}>{svc.label}</div>
+                  <div style={{ fontSize: 12, color: "#cccccc", letterSpacing: "0.02em", marginTop: 2 }}>{svc.description}</div>
                 </div>
               </div>
             </div>
 
             {/* 02 · SCOPE SLIDER */}
             <div style={{ padding: isMobile ? "0 16px" : 0, marginBottom: isMobile ? 20 : 28 }}>
-              <div style={{ fontSize: 8, letterSpacing: "0.25em", color: "#252520", textTransform: "uppercase", marginBottom: 10 }}>02 · Define Scope</div>
+              <div style={{ fontSize: 12, letterSpacing: "0.01em", color: "#999999", textTransform: "uppercase", marginBottom: 10 }}>02 · Define Scope</div>
               <div style={{ background: "#0c0c0a", border: "1px solid #181814", borderRadius: 6, padding: "22px 22px 18px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 16 }}>
                   <div>
-                    <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? 16 : 19, color: "#555" }}>{svc.usageLabel}</div>
-                    <div style={{ fontSize: 9, color: "#28281e", marginTop: 3, letterSpacing: "0.06em" }}>{svc.description}</div>
+                    <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? 16 : 19, color: "#dddddd" }}>{svc.usageLabel}</div>
+                    <div style={{ fontSize: 13, color: "#999999", marginTop: 3, letterSpacing: "0.02em" }}>{svc.description}</div>
                   </div>
                   <div style={{ textAlign: "right" }}>
                     <span style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? 36 : 46, fontWeight: 700, color: pd.color, lineHeight: 1 }}>{u}</span>
-                    <div style={{ fontSize: 8, color: "#2e2e28", textTransform: "uppercase", marginTop: 3 }}>
+                    <div style={{ fontSize: 12, color: "#999999", textTransform: "uppercase", marginTop: 3 }}>
                       {u > pd.usageBase ? `+${extra} beyond base` : "within base"}
                     </div>
                   </div>
@@ -605,15 +605,15 @@
                   onChange={(e) => setUsage(p => ({ ...p, [service]: +e.target.value }))}
                 />
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: 5 }}>
-                  <span style={{ fontSize: 8, color: "#1e1e1a" }}>{svc.usageRange[0]} {svc.usageUnit}</span>
-                  <span style={{ fontSize: 8, color: "#1e1e1a" }}>{svc.usageRange[1]} {svc.usageUnit}</span>
+                  <span style={{ fontSize: 12, color: "#999999" }}>{svc.usageRange[0]} {svc.usageUnit}</span>
+                  <span style={{ fontSize: 12, color: "#999999" }}>{svc.usageRange[1]} {svc.usageUnit}</span>
                 </div>
               </div>
             </div>
 
             {/* 03 · DELIVERY SPEED */}
             <div style={{ padding: isMobile ? "0 16px" : 0, marginBottom: isMobile ? 24 : 32 }}>
-              <div style={{ fontSize: 8, letterSpacing: "0.25em", color: "#252520", textTransform: "uppercase", marginBottom: 10 }}>03 · Delivery Speed</div>
+              <div style={{ fontSize: 12, letterSpacing: "0.01em", color: "#999999", textTransform: "uppercase", marginBottom: 10 }}>03 · Delivery Speed</div>
               <div style={{ display: "flex", gap: 8 }}>
                 {[
                   { key: false, label: "Standard", sub: "Normal turnaround" },
@@ -633,8 +633,8 @@
                       textAlign: "left",
                     }}
                   >
-                    <div style={{ fontSize: 10, fontWeight: 700, color: rush === opt.key ? (opt.key ? "#E8854A" : pd.color) : "#333", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 3 }}>{opt.label}</div>
-                    <div style={{ fontSize: 9, color: "#2a2a24", letterSpacing: "0.05em" }}>{opt.sub}</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: rush === opt.key ? (opt.key ? "#E8854A" : pd.color) : "#333", letterSpacing: "0.01em", textTransform: "uppercase", marginBottom: 3 }}>{opt.label}</div>
+                    <div style={{ fontSize: 13, color: "#aaaaaa", letterSpacing: "0.02em" }}>{opt.sub}</div>
                   </button>
                 ))}
               </div>
@@ -642,7 +642,7 @@
 
             {/* 04 · PLAN CARDS */}
             <div style={{ padding: isMobile ? "0 16px" : 0, marginBottom: isMobile ? 20 : 32 }}>
-              <div style={{ fontSize: 8, letterSpacing: "0.25em", color: "#252520", textTransform: "uppercase", marginBottom: 10 }}>04 · Select Package</div>
+              <div style={{ fontSize: 12, letterSpacing: "0.01em", color: "#999999", textTransform: "uppercase", marginBottom: 10 }}>04 · Select Package</div>
 
               {isMobile ? (
                 <>
@@ -659,9 +659,9 @@
                           border: plan === pk ? `1px solid ${p.color}` : "1px solid #1a1a17",
                           borderRadius: 4,
                           color: plan === pk ? "#000" : "#383830",
-                          fontSize: 9,
+                          fontSize: 13,
                           fontWeight: 700,
-                          letterSpacing: "0.1em",
+                          letterSpacing: "0.01em",
                           textTransform: "uppercase",
                           cursor: "pointer",
                           transition: "all 0.25s",
@@ -678,33 +678,33 @@
                       <div>
                         <div style={{ width: 7, height: 7, borderRadius: "50%", background: pd.color, boxShadow: `0 0 10px ${pd.color}88`, marginBottom: 10 }} />
                         <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 24, fontWeight: 600, color: "#fff", letterSpacing: "-0.02em" }}>{pd.name}</div>
-                        <div style={{ fontSize: 9, color: pd.color, letterSpacing: "0.1em", textTransform: "uppercase", marginTop: 2 }}>{pd.tagline}</div>
-                        <div style={{ fontSize: 8, color: "#282820", marginTop: 4 }}>Intl. equiv. {pd.usdRef}</div>
+                        <div style={{ fontSize: 13, color: pd.color, letterSpacing: "0.01em", textTransform: "uppercase", marginTop: 2 }}>{pd.tagline}</div>
+                        <div style={{ fontSize: 12, color: "#282820", marginTop: 4 }}>Intl. equiv. {pd.usdRef}</div>
                       </div>
                       <div style={{ textAlign: "right" }}>
                         <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 44, fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1 }}>
                           <span style={{ fontSize: 16, fontWeight: 400, verticalAlign: "super" }}>K</span>
                           <AnimatedNumber value={total} />
                         </div>
-                        <div style={{ fontSize: 8, color: "#383830", textTransform: "uppercase", marginTop: 4 }}>per project</div>
-                        {rush && <div style={{ fontSize: 8, color: "#E8854A", marginTop: 2 }}>Rush +35%</div>}
+                        <div style={{ fontSize: 12, color: "#999999", textTransform: "uppercase", marginTop: 4 }}>per project</div>
+                        {rush && <div style={{ fontSize: 12, color: "#E8854A", marginTop: 2 }}>Rush +35%</div>}
                       </div>
                     </div>
 
                     {extra > 0 && (
-                      <div style={{ background: "#0a0a08", border: "1px solid #1c1c18", borderRadius: 4, padding: "7px 12px", fontSize: 9, color: "#383830", marginBottom: 14 }}>
+                      <div style={{ background: "#0a0a08", border: "1px solid #1c1c18", borderRadius: 4, padding: "7px 12px", fontSize: 13, color: "#cccccc", marginBottom: 14 }}>
                         Base K{pd.basePrice.toLocaleString()} + {extra} extra × K{pd.pricePerUnit.toLocaleString()}
                       </div>
                     )}
 
                     <div style={{ display: "flex", alignItems: "center", gap: 7, paddingBottom: 14, borderBottom: "1px solid #181814", marginBottom: 14 }}>
                       <div style={{ width: 4, height: 4, borderRadius: "50%", background: pd.color }} />
-                      <span style={{ fontSize: 9, color: "#555", letterSpacing: "0.06em", textTransform: "uppercase" }}>{pd.turnaround}</span>
+                      <span style={{ fontSize: 13, color: "#dddddd", letterSpacing: "0.02em", textTransform: "uppercase" }}>{pd.turnaround}</span>
                     </div>
 
                     <button
                       onClick={() => setFeatOpen(v => !v)}
-                      style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", background: "transparent", border: "none", padding: "10px 0", color: "#444", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", cursor: "pointer" }}
+                      style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", background: "transparent", border: "none", padding: "10px 0", color: "#cccccc", fontSize: 13, letterSpacing: "0.02em", textTransform: "uppercase", cursor: "pointer" }}
                     >
                       <span>What's included ({pd.features.length})</span>
                       <span style={{ fontSize: 18, color: pd.color, display: "inline-block", transform: featOpen ? "rotate(45deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>+</span>
@@ -714,7 +714,7 @@
                         {pd.features.map((f, i) => (
                           <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 10 }}>
                             <div style={{ width: 4, height: 4, borderRadius: "50%", background: pd.color, flexShrink: 0, marginTop: 5 }} />
-                            <span style={{ fontSize: 10, color: "#666", letterSpacing: "0.04em", lineHeight: 1.6 }}>{f}</span>
+                            <span style={{ fontSize: 12, color: "#e0e0e0", letterSpacing: "0.01em", lineHeight: 1.6 }}>{f}</span>
                           </div>
                         ))}
                       </div>
@@ -734,38 +734,38 @@
             {isMobile ? (
               <div style={{ position: "fixed", bottom: 0, left: 0, right: 0, background: "rgba(7,7,5,0.95)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderTop: `1px solid ${pd.color}44`, padding: "14px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", zIndex: 30 }}>
                 <div>
-                  <div style={{ fontSize: 7, color: "#282820", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 3 }}>
+                  <div style={{ fontSize: 13, color: "#282820", letterSpacing: "0.02em", textTransform: "uppercase", marginBottom: 3 }}>
                     {svc.label} · {pd.name}{rush ? " · Rush" : ""}
                   </div>
                   <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 30, fontWeight: 700, color: "#fff", lineHeight: 1 }}>
                     <span style={{ fontSize: 13, verticalAlign: "super", fontWeight: 400 }}>K</span>
                     <AnimatedNumber value={total} />
                   </div>
-                  <div style={{ fontSize: 7, color: "#2e2e28", marginTop: 2, letterSpacing: "0.06em" }}>
+                  <div style={{ fontSize: 13, color: "#aaaaaa", marginTop: 2, letterSpacing: "0.02em" }}>
                     Per project · {pd.usdRef} intl. ref
                   </div>
                 </div>
-                <button onClick={() => setShowForm(true)} style={{ padding: "14px 20px", background: pd.color, color: "#000", border: "none", borderRadius: 4, fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", cursor: "pointer" }}>
+                <button onClick={() => setShowForm(true)} style={{ padding: "14px 20px", background: pd.color, color: "#000", border: "none", borderRadius: 4, fontSize: 12, fontWeight: 700, letterSpacing: "0.02em", textTransform: "uppercase", cursor: "pointer" }}>
                   Request Quote →
                 </button>
               </div>
             ) : (
               <div style={{ background: "linear-gradient(135deg,#0e0d0b,#111)", border: `1px solid ${pd.color}22`, borderRadius: 6, padding: "28px 32px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 24, marginTop: 8 }}>
                 <div>
-                  <div style={{ fontSize: 8, letterSpacing: "0.2em", color: "#252520", textTransform: "uppercase", marginBottom: 8 }}>Project Estimate</div>
-                  <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 15, color: "#555" }}>
+                  <div style={{ fontSize: 12, letterSpacing: "0.01em", color: "#999999", textTransform: "uppercase", marginBottom: 8 }}>Project Estimate</div>
+                  <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 15, color: "#dddddd" }}>
                     <span style={{ color: pd.color }}>{svc.label}</span>
-                    {" · "}<span style={{ color: "#777" }}>{pd.name}</span>
+                    {" · "}<span style={{ color: "#e8e8e8" }}>{pd.name}</span>
                     {" · "}{u} {svc.usageUnit}
                     {rush && <span style={{ color: "#E8854A" }}> · Rush delivery</span>}
                   </div>
-                  <div style={{ fontSize: 9, color: "#282820", marginTop: 5, letterSpacing: "0.06em" }}>
+                  <div style={{ fontSize: 13, color: "#999999", marginTop: 5, letterSpacing: "0.02em" }}>
                     International equivalent: {pd.usdRef} USD · {pd.deliverable}
                   </div>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
                   <div>
-                    <div style={{ fontSize: 8, letterSpacing: "0.15em", color: "#202018", textTransform: "uppercase", marginBottom: 4 }}>Project Total</div>
+                    <div style={{ fontSize: 12, letterSpacing: "0.02em", color: "#999999", textTransform: "uppercase", marginBottom: 4 }}>Project Total</div>
                     <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 40, fontWeight: 700, color: "#fff", lineHeight: 1 }}>
                       <span style={{ fontSize: 16, fontWeight: 400, verticalAlign: "super" }}>K</span>
                       <AnimatedNumber value={total} />
@@ -773,7 +773,7 @@
                   </div>
                   <button
                     onClick={() => setShowForm(true)}
-                    style={{ padding: "15px 36px", background: pd.color, color: "#000", border: "none", borderRadius: 3, fontSize: 10, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", cursor: "pointer" }}>
+                    style={{ padding: "15px 36px", background: pd.color, color: "#000", border: "none", borderRadius: 3, fontSize: 12, fontWeight: 700, letterSpacing: "0.02em", textTransform: "uppercase", cursor: "pointer" }}>
                     Request a Quote →
                   </button>
                 </div>
@@ -781,7 +781,7 @@
             )}
 
             <div style={{ textAlign: "center", marginTop: 32, padding: isMobile ? "0 20px" : 0 }}>
-              <p style={{ fontSize: 9, color: "#1c1c18", letterSpacing: "0.1em" }}>
+              <p style={{ fontSize: 13, color: "#999999", letterSpacing: "0.01em" }}>
                 All estimates are indicative · Final pricing confirmed after project brief · © 2024 Gino Studios Zambia
               </p>
             </div>
@@ -823,18 +823,18 @@
         border: "1px solid #222",
         borderRadius: 4,
         padding: "12px 14px",
-        color: "#bbb",
-        fontSize: 11,
-        fontFamily: "'DM Mono', monospace",
-        letterSpacing: "0.04em",
+        color: "#ddd",
+        fontSize: 13,
+        fontFamily: "'Montserrat', sans-serif",
+        letterSpacing: "0.01em",
         outline: "none",
         transition: "border-color 0.2s",
       };
 
       const labelStyle = {
-        fontSize: 8,
-        letterSpacing: "0.2em",
-        color: "#383830",
+        fontSize: 12,
+        letterSpacing: "0.01em",
+        color: "#cccccc",
         textTransform: "uppercase",
         marginBottom: 6,
         display: "block",
@@ -960,7 +960,7 @@ Write the compiled project brief now. It should begin with a subject line sugges
             {/* Close */}
             <button
               onClick={onClose}
-              style={{ position: "absolute", top: 20, right: 20, background: "transparent", border: "none", color: "#333", fontSize: 22, cursor: "pointer", lineHeight: 1 }}
+              style={{ position: "absolute", top: 20, right: 20, background: "transparent", border: "none", color: "#bbbbbb", fontSize: 22, cursor: "pointer", lineHeight: 1 }}
             >×</button>
 
             {/* ── STEP: FORM ── */}
@@ -968,14 +968,14 @@ Write the compiled project brief now. It should begin with a subject line sugges
               <>
                 {/* Header */}
                 <div style={{ marginBottom: 36 }}>
-                  <div style={{ fontSize: 8, letterSpacing: "0.3em", color: accentColor, textTransform: "uppercase", marginBottom: 12 }}>
+                  <div style={{ fontSize: 12, letterSpacing: "0.02em", color: accentColor, textTransform: "uppercase", marginBottom: 12 }}>
                     ◆ Project Enquiry
                   </div>
                   <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? 32 : 40, fontWeight: 600, color: "#fff", letterSpacing: "-0.03em", lineHeight: 1, marginBottom: 10 }}>
                     Tell us about<br />
                     <em style={{ color: accentColor, fontStyle: "italic" }}>your project.</em>
                   </h2>
-                  <p style={{ fontSize: 10, color: "#383830", letterSpacing: "0.06em", lineHeight: 1.8 }}>
+                  <p style={{ fontSize: 12, color: "#cccccc", letterSpacing: "0.02em", lineHeight: 1.8 }}>
                     Fill in your details and we'll compile a complete project brief — ready to send in one click.
                   </p>
                 </div>
@@ -983,8 +983,8 @@ Write the compiled project brief now. It should begin with a subject line sugges
                 {/* Selected package summary pill */}
                 <div style={{ background: "#111", border: `1px solid ${accentColor}33`, borderRadius: 6, padding: "14px 18px", marginBottom: 28, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
                   <div>
-                    <div style={{ fontSize: 8, letterSpacing: "0.2em", color: "#2e2e28", textTransform: "uppercase", marginBottom: 4 }}>Selected Package</div>
-                    <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 16, color: "#888" }}>
+                    <div style={{ fontSize: 12, letterSpacing: "0.01em", color: "#aaaaaa", textTransform: "uppercase", marginBottom: 4 }}>Selected Package</div>
+                    <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 16, color: "#eeeeee" }}>
                       <span style={{ color: accentColor }}>{svc.label}</span> · {pd.name} · {u} {svc.usageUnit}{rushLabel}
                     </div>
                   </div>
@@ -1052,9 +1052,9 @@ Write the compiled project brief now. It should begin with a subject line sugges
                     color: (!form.name || !form.email || !form.description) ? "#333" : "#000",
                     border: "none",
                     borderRadius: 4,
-                    fontSize: 11,
+                    fontSize: 13,
                     fontWeight: 700,
-                    letterSpacing: "0.15em",
+                    letterSpacing: "0.02em",
                     textTransform: "uppercase",
                     cursor: (!form.name || !form.email || !form.description) ? "not-allowed" : "pointer",
                     transition: "all 0.3s",
@@ -1063,7 +1063,7 @@ Write the compiled project brief now. It should begin with a subject line sugges
                 >
                   Compile Project Brief →
                 </button>
-                <div style={{ textAlign: "center", marginTop: 10, fontSize: 9, color: "#252520", letterSpacing: "0.06em" }}>
+                <div style={{ textAlign: "center", marginTop: 10, fontSize: 13, color: "#999999", letterSpacing: "0.02em" }}>
                   * Required fields · Your brief is generated instantly using AI
                 </div>
               </>
@@ -1076,7 +1076,7 @@ Write the compiled project brief now. It should begin with a subject line sugges
                 <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
                 <div>
                   <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 26, color: "#fff", textAlign: "center", marginBottom: 8 }}>Compiling your brief…</div>
-                  <div style={{ fontSize: 10, color: "#383830", textAlign: "center", letterSpacing: "0.06em" }}>Claude is drafting your project document</div>
+                  <div style={{ fontSize: 12, color: "#cccccc", textAlign: "center", letterSpacing: "0.02em" }}>Claude is drafting your project document</div>
                 </div>
               </div>
             )}
@@ -1085,13 +1085,13 @@ Write the compiled project brief now. It should begin with a subject line sugges
             {step === "brief" && (
               <>
                 <div style={{ marginBottom: 28 }}>
-                  <div style={{ fontSize: 8, letterSpacing: "0.3em", color: accentColor, textTransform: "uppercase", marginBottom: 12 }}>
+                  <div style={{ fontSize: 12, letterSpacing: "0.02em", color: accentColor, textTransform: "uppercase", marginBottom: 12 }}>
                     ◆ Your Project Brief
                   </div>
                   <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? 30 : 38, fontWeight: 600, color: "#fff", letterSpacing: "-0.03em", lineHeight: 1, marginBottom: 10 }}>
                     Ready to send.
                   </h2>
-                  <p style={{ fontSize: 10, color: "#383830", letterSpacing: "0.06em", lineHeight: 1.8 }}>
+                  <p style={{ fontSize: 12, color: "#cccccc", letterSpacing: "0.02em", lineHeight: 1.8 }}>
                     Copy the brief below and paste it directly into an email to <span style={{ color: accentColor }}>hello@ginostudios.co.zm</span>
                   </p>
                 </div>
@@ -1103,11 +1103,11 @@ Write the compiled project brief now. It should begin with a subject line sugges
                   borderRadius: 6,
                   padding: "24px",
                   marginBottom: 20,
-                  fontFamily: "'DM Mono', monospace",
-                  fontSize: 11,
-                  color: "#888",
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontSize: 13,
+                  color: "#eeeeee",
                   lineHeight: 1.85,
-                  letterSpacing: "0.03em",
+                  letterSpacing: "0.01em",
                   whiteSpace: "pre-wrap",
                   maxHeight: 420,
                   overflowY: "auto",
@@ -1126,9 +1126,9 @@ Write the compiled project brief now. It should begin with a subject line sugges
                       color: copied ? "#4CAF50" : "#000",
                       border: copied ? "1.5px solid #4CAF50" : "none",
                       borderRadius: 4,
-                      fontSize: 11,
+                      fontSize: 13,
                       fontWeight: 700,
-                      letterSpacing: "0.15em",
+                      letterSpacing: "0.02em",
                       textTransform: "uppercase",
                       cursor: "pointer",
                       transition: "all 0.3s",
@@ -1138,13 +1138,13 @@ Write the compiled project brief now. It should begin with a subject line sugges
                   </button>
                   <button
                     onClick={() => setStep("form")}
-                    style={{ flex: 1, padding: "15px 0", background: "transparent", color: "#444", border: "1px solid #222", borderRadius: 4, fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", cursor: "pointer" }}
+                    style={{ flex: 1, padding: "15px 0", background: "transparent", color: "#cccccc", border: "1px solid #222", borderRadius: 4, fontSize: 12, fontWeight: 700, letterSpacing: "0.02em", textTransform: "uppercase", cursor: "pointer" }}
                   >
                     ← Edit
                   </button>
                 </div>
 
-                <div style={{ marginTop: 12, fontSize: 9, color: "#222", textAlign: "center", letterSpacing: "0.06em" }}>
+                <div style={{ marginTop: 12, fontSize: 13, color: "#222", textAlign: "center", letterSpacing: "0.02em" }}>
                   This brief was compiled by Claude AI from the information you provided
                 </div>
               </>
