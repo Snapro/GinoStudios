@@ -4,8 +4,6 @@
    Fonts: Syne (display) + Outfit (body)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Outfit:wght@300;400;500;600&display=swap');
-
 :root {
   --bg-base:#080b0f;--bg-surface:#0f1318;--bg-card:#141920;--bg-card-hover:#1c2430;
   --border:rgba(200,169,110,0.14);--border-hover:rgba(200,169,110,0.35);--border-light:rgba(255,255,255,0.06);
